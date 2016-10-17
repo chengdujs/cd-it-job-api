@@ -1,0 +1,28 @@
+{
+  "name": "cd-it-job-api",
+  "version": "0.0.1",
+  "description": "cd it job project api side",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "gulp",
+    "build": "gulp -r",
+    "test": "test"
+  },
+  "repository": {
+    "url": "https://github.com/chengdujs/cd-it-job-api.git",
+    "type": "git"
+  },
+  "author": "Jay.M.Hu <hm910705@163.com>",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^4.6.4",
+    "rest-express": "^1.1.1"
+  },
+  "devDependencies": {
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-develop-server": "^0.5.2",
+    "node-notifier": "^4.6.1",
+    "shelljs": "^0.7.4"
+  }
+}
