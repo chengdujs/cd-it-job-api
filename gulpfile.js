@@ -1,5 +1,5 @@
 require('shelljs/global');
-const gulp = require('gulp');
+const gulp = require('gulp4');
 const notifier = require('node-notifier');
 const devServer = require('gulp-develop-server');
 

@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run dev",
-    "dev": "gulp",
-    "build": "gulp -r",
+    "dev": "gulp4",
+    "build": "gulp4 -r",
     "test": "test"
   },
   "repository": {
@@ -16,13 +16,13 @@
   "author": "Jay.M.Hu <hm910705@163.com>",
   "license": "MIT",
   "dependencies": {
-    "mongoose": "^4.6.4",
-    "rest-express": "^1.1.1"
+    "mongoose": "^4.8.2",
+    "rest-express": "^1.2.0"
   },
   "devDependencies": {
-    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-develop-server": "^0.5.2",
-    "node-notifier": "^4.6.1",
-    "shelljs": "^0.7.4"
+    "gulp4": "^4.0.1",
+    "node-notifier": "^5.0.2",
+    "shelljs": "^0.7.6"
   }
 }
