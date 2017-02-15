@@ -1,6 +1,5 @@
 const path = require('path');
 const restExpress = require('rest-express');
-
 const config = require('./config');
 
 const options = {

@@ -29,14 +29,24 @@ gulp.task('copy', () => {
 });
 
 gulp.task('serve', done => {
-  devServer.listen({ path: './src/index.js' });
-  done();
+  devServer.listen({ path: './src/index.js' }, err => {
+    if (err) {
+      console.error(err);
+    }
+    done();
+  });
+
 });
 
 gulp.task('restart', done => {
-  devServer.restart();
-  notify('Restart successfully.');
-  done();
+  devServer.restart(err => {
+    if (err) {
+      console.error(err);
+    } else {
+      notify('Restart successfully.');
+    }
+    done();
+  });
 });
 
 gulp.task('watch', done => {
@@ -48,4 +58,4 @@ gulp.task('watch', done => {
 
 let tasks = isRelease ? ['clean', 'copy'] : ['serve', 'watch'];
 
-gulp.task('default', gulp.series(...tasks));
+gulp.task('default', gulp.series(...tasks, () => exec('start http://localhost:3333')));
